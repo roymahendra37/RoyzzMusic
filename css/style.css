@@ -1,0 +1,408 @@
+*, html, body {
+    margin : 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-image: url('/assets/background.jpg');
+    background-size: cover;
+}
+
+.navcontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.brand {
+    display: flex;
+    padding: 15px;
+    font-size: 25px;
+    align-items: center;
+}
+
+.name {
+    color: #0069e1;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 600;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation > li {
+    list-style: none;
+    padding: 15px;
+}
+
+.navigation > li > a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.navigation> li> a:hover {
+    color: #0069e1;
+    transition: all 0.2s ease-in-out;
+}
+
+.bodycontainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-top: -70px;
+    margin-bottom: -50px ;
+}
+
+img{
+    width: 600px;
+}
+
+h2 {
+    margin-bottom: 50px;
+    font-size: 40px;
+    border: 1px solid white;
+    border-radius: 15px;
+    width: 1100px;
+    padding: 10px;
+    background-color: rgba(209, 209, 209, 0.493);
+}
+
+h3 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    background-color: #0069e17a;
+    border-radius: 20px;
+    width: 400px;
+}
+
+.paket {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    width: 1000px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.74);
+    border-radius: 15px;
+    align-items: center;
+}
+
+.paket1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+    
+}
+
+.paket2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+}
+
+.paket3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+}
+
+.paket1:hover {
+    background-color: rgb(0, 52, 112);
+    transition: all 0.2s ease-in-out;
+    font-size: 22px;
+    border-radius: 10px;
+}
+
+.paket2:hover {
+    background-color: rgb(0, 52, 112);
+    transition: all 0.2s ease-in-out;
+    font-size: 22px;
+    border-radius: 10px;
+}
+
+.paket3:hover {
+    background-color: rgb(0, 52, 112);
+    transition: all 0.2s ease-in-out;
+    font-size: 22px;
+    border-radius: 10px;
+}
+
+.hallogin {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.hlogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+    width: 400px;
+    height: 400px;
+    border: 2px solid grey;
+    background-color: rgba(255, 255, 255, 0.808);
+    border-radius: 25px;
+}
+
+.hlogin>input {
+    width: 300px;
+    padding: 5px;
+    margin: -20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    background-color: rgba(255, 255, 255, 0.733);
+}
+
+.hlogin>label {
+    margin-bottom: -20px;
+    font-weight: 500;
+}
+
+.hlogin>button {
+    font-size: 20px;
+    padding: 5px;
+    background-color: rgb(143, 143, 143);
+    border-radius: 10px;
+    border: 0px solid;
+    width: 100px;
+    font-weight: bold;
+    margin-bottom: -20px;
+}
+
+.hlogin>button>a {
+    text-decoration: none;
+    color: black;
+}
+
+.hregister>button>a{
+    text-decoration: none;
+    color: black;
+}
+
+.hlogin>button:hover{
+    background-color: #0069e1;
+    color: white;
+}
+
+.hlogin>p {
+    margin-bottom: -20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.hlogin>a {
+    color: rgb(42, 107, 228);
+    text-decoration: none;
+    margin-top: -20px;
+    font-size: 20px;
+}
+
+.halregister {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.hregister {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+    width: 400px;
+    height: 400px;
+    border: 2px solid grey;
+    background-color: rgba(255, 255, 255, 0.808);
+    border-radius: 25px;
+}
+
+.hregister>label {
+    margin-bottom: -20px;
+    font-weight: 500;
+}
+
+.hregister>input {
+    width: 300px;
+    padding: 5px;
+    margin: -20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    background-color: rgba(255, 255, 255, 0.733);
+}
+
+.hregister>button {
+    font-size: 20px;
+    padding: 5px;
+    background-color: rgb(143, 143, 143);
+    border-radius: 10px;
+    border: 0px solid;
+    width: 100px;
+    font-weight: bold;
+    margin-bottom: -20px;
+}
+
+.hregister>button:hover{
+    background-color: #0069e1;
+    color: white;
+}
+
+.hregister>p {
+    margin-bottom: -20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.hregister>a {
+    color: rgb(42, 107, 228);
+    text-decoration: none;
+    margin-top: -20px;
+    font-size: 20px;
+}
+
+@media (max-width: 576px) {
+    .bodycontainer {
+        width: 100%;
+        height: 100%;
+    }
+
+    .navcontainer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+    
+    .brand {
+        display: flex;
+        padding: 15px;
+        font-size: 25px;
+        align-items: center;
+    }
+    
+    .name {
+        color: #0069e1;
+        font-family: "League Spartan", sans-serif;
+        font-weight: 600;
+    }
+    
+    .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .navigation > li {
+        list-style: none;
+        padding: 15px;
+    }
+    
+    .navigation > li > a {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    
+    .navigation> li> a:hover {
+        color: #0069e1;
+        transition: all 0.2s ease-in-out;
+    }
+
+    body {
+        background-image: url('/assets/background.jpg');
+        background-size: 100%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -20px;
+    }
+    img{
+        width: 300px;
+    }
+
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-size: 25px;
+        border: 1px solid white;
+        border-radius: 15px;
+        width: 300px;
+        padding: 10px;
+        background-color: rgba(209, 209, 209, 0.815);
+    }
+    
+    h3 {
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        background-color: #0069e1c4;
+        border-radius: 20px;
+        width: 300px;
+    }
+
+    .paket {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        font-family: "League Spartan", sans-serif;
+        font-weight: bold;
+        width: 300px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.74);
+        border-radius: 15px;
+        align-items: center;
+    }
+
+    .paket1, .paket2, .paket3 {
+        display: flex;
+        padding: 25px;
+        color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        width: 400pxpx;
+        justify-content: center;
+        margin: -20px;
+    }
+
+    .paket1:hover, .paket2:hover, .paket3:hover {
+        background-color: rgb(0, 52, 112);
+        transition: all 0.2s ease-in-out;
+        font-size: 22px;
+        border-radius: 10px;
+    }
+  }

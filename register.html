@@ -2,33 +2,37 @@
 <html>
     <head>
         <link rel="icon" href="assets/icon.png" />
-        <title>Royzz Music</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+        <title>Royzz Music - Register</title>
     </head>
         
     <body background="assets/background.png">
-        <left>
-            <nav>
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
-                <a href="index.html">Home</a>
-            </nav>
-        </left>
-        <center>
-            <header>
-                <div class="logo">
-                    <img src="assets/logo.png" style="width: 500px;" >
+        <div class="navcontainer">
+            <nav class="wrapper">
+                <div class="brand">
+                    <div class="name">Royzz Music</div>
                 </div>
-            </header>
-            <form>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+        <center>
+            <form class="halregister">
                 <div class="hregister">
-                    <h3>Register</h3>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" /> <br /> <br />
-                    <label for="username">Username</label>
-                    <input type="text" id="username" /> <br /> <br />
-                    <label for="password">Password</label>
-                    <input type="password" id="password" /> <br /> <br />
-                    <button type="submit">Register</button> <br /> <br />
+                    <p>Register</p>
+                    <label>Email</label>
+                    <input class="input" type="text" name="email"/>
+                    <label>Username</label>
+                    <input class="input" type="text" name="username"/>
+                    <label>Password</label>
+                    <input class="input" type="password" name="password"/>
+                    <button type="submit"><a href="login.html">Register</a></button>
                     <label>Sudah memiliki akun?</label>
                   <a href="login.html">Login</a>
                 </div> 
