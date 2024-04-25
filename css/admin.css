@@ -58,11 +58,20 @@ body {
 }
 
 .das-content {
-    margin: 50px;
+    margin: 100px;
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-size: 30px;
     font-weight: bold;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.178);
+    padding: 60px;
+}
+
+.das-content img {
+    background-color: rgba(0, 0, 0, 0.575);
+    border-radius: 10px;
 }
 
 .table-data {
@@ -164,12 +173,14 @@ th, td {
 
 h1 {
     margin: auto;
-    margin-top: 200px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     align-items: center;
     font-size:40px;
     padding: 10px;
-    background-color: #0069e142;
+    background-color: #000000;
     border: 1px solid;
-    border-radius: 20px;
-    width: 900px;
+    border-radius: 15px;
+    width: 800px;
+    color: white;
 }
