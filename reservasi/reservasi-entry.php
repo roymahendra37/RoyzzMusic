@@ -16,14 +16,14 @@
                     <div class="name">Royzz Music (Admin) </div>
                 </div>
                 <ul class="navigation">
-                    <li><a href="../admin.html">Dashboard</a></li>
-                    <li><a href="../gear/gear.html">Gear</a></li>
-                    <li><a href="../reservasi/reservasi.html">Reservasi</a></li>
+                    <li><a href="../admin.php">Dashboard</a></li>
+                    <li><a href="../gear/gear.php">Gear</a></li>
+                    <li><a href="../reservasi/reservasi.php">Reservasi</a></li>
                 </ul>
             </nav>
         </div>
     </div>
-    <form class="halreservasi-entry">
+    <form class="halreservasi-entry" action="reservasi-proses.php" method="post" enctype="multipart/form-data">>
         <div class="hreservasi-entry">
             <p>Tambah Data</p>
             <label>Nama</label>
@@ -38,7 +38,7 @@
             <input class="input" type="text" name="durasi"/>
             <label class="input" for="photo">Bukti Pembayaran</label>
 			<input class="input" type="file" name="bukti" id="bukti" style="margin-bottom: 20px" />
-            <button class="btn-simpan" "submit">Simpan</button>
+            <button class="btn-simpan" name="simpan">Simpan</button>
         </div> 
     </form>
 </body>

@@ -15,9 +15,9 @@
                 <div class="name">Royzz Music (Admin) </div>
             </div>
             <ul class="navigation">
-                <li><a href="admin.html">Dashboard</a></li>
-                <li><a href="gear/gear.html">Gear</a></li>
-                <li><a href="reservasi/reservasi.html">Reservasi</a></li>
+                <li><a href="admin.php">Dashboard</a></li>
+                <li><a href="gear/gear.php">Gear</a></li>
+                <li><a href="reservasi/reservasi.php">Reservasi</a></li>
             </ul>
         </nav>
     </div>

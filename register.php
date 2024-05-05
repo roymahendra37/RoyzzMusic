@@ -9,21 +9,21 @@
         <title>Royzz Music - Register</title>
     </head>
         
-    <body background="assets/background.png">
+    <body background="assets/background.jpg">
         <div class="navcontainer">
             <nav class="wrapper">
                 <div class="brand">
                     <div class="name">Royzz Music</div>
                 </div>
                 <ul class="navigation">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="register.html">Register</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="login.php">Login</a></li>
+                    <li><a href="register.php">Register</a></li>
                 </ul>
             </nav>
         </div>
         <center>
-            <form class="halregister">
+            <form class="halregister" action="register-proses.php" method="post" enctype="multipart/form-data">>
                 <div class="hregister">
                     <p>Register</p>
                     <label>Email</label>
@@ -32,9 +32,9 @@
                     <input class="input" type="text" name="username"/>
                     <label>Password</label>
                     <input class="input" type="password" name="password"/>
-                    <button type="submit"><a href="login.html">Register</a></button>
+                    <button type="submit" name="register">Register</a></button>
                     <label>Sudah memiliki akun?</label>
-                  <a href="login.html">Login</a>
+                  <a href="login.php">Login</a>
                 </div> 
             </form>
         </center>

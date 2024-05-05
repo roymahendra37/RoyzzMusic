@@ -16,9 +16,9 @@
                     <div class="name">Royzz Music (Admin) </div>
                 </div>
                 <ul class="navigation">
-                    <li><a href="../admin.html">Dashboard</a></li>
-                    <li><a href="../gear/gear.html">Gear</a></li>
-                    <li><a href="../reservasi/reservasi.html">Reservasi</a></li>
+                    <li><a href="../admin.php">Dashboard</a></li>
+                    <li><a href="../gear/gear.php">Gear</a></li>
+                    <li><a href="../reservasi/reservasi.php">Reservasi</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,7 +26,7 @@
     <div class="gear-content">
 		<h3>Gear</h3>
 		<button type="button" class="btn btn-tambah">
-		   <a href="../gear/gear-entry.html">Tambah Data</a>
+		   <a href="../gear/gear-entry.php">Tambah Data</a>
 		</button>
 		<table class="table-data">
 		   <thead>
