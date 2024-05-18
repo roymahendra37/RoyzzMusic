@@ -23,7 +23,7 @@
             </nav>
         </div>
     </div>
-    <form class="halreservasi-entry" action="reservasi-proses.php" method="post" enctype="multipart/form-data">>
+    <form class="halreservasi-entry" action="reservasi-proses.php" method="post" enctype="multipart/form-data">
         <div class="hreservasi-entry">
             <p>Tambah Data</p>
             <label>Nama</label>

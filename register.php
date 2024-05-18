@@ -23,7 +23,7 @@
             </nav>
         </div>
         <center>
-            <form class="halregister" action="register-proses.php" method="post" enctype="multipart/form-data">>
+            <form class="halregister" action="register-proses.php" method="post" enctype="multipart/form-data">
                 <div class="hregister">
                     <p>Register</p>
                     <label>Email</label>
