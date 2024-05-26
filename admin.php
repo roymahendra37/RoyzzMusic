@@ -1,3 +1,10 @@
+<?php 
+	session_start();
+	if($_SESSION['username'] == null) {
+		header('location:login.php');
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <title>Royzz Music Admin - Dashboard</title>
 </head>
-<body>
+<body background="assets/background.jpg" style="background-size: 100%;">
     <div class="navcontainer">
         <nav class="wrapper">
             <div class="brand">
@@ -18,11 +25,16 @@
                 <li><a href="admin.php">Dashboard</a></li>
                 <li><a href="gear/gear.php">Gear</a></li>
                 <li><a href="reservasi/reservasi.php">Reservasi</a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
         </nav>
     </div>
     <div class="das-content">
-        <h1>Selamat Datang Admin Royzz Music:)</h1>
+        <h1>Selamat Datang 
+            <?php
+                echo $_SESSION['username'];
+            ?>
+        </h1>
         <center>
             <img src="assets/logo.png" style="width: 600px;"/>
         </center>

@@ -1,3 +1,10 @@
+<?php
+session_start();
+if ($_SESSION['username'] == null) {
+	header('location:../login.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +26,7 @@
                     <li><a href="../admin.php">Dashboard</a></li>
                     <li><a href="../gear/gear.php">Gear</a></li>
                     <li><a href="../reservasi/reservasi.php">Reservasi</a></li>
+					<li><a href="../logout.php">Logout</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,14 +47,61 @@
 			</tr>
 		   </thead>
 		   <tbody>
-			<tr>
-			   <td>Gitar Elektrik</td>
-			   <td>GX100</td>
-			   <td>Cort</td>
-			   <td>2.000.000</td>
-			   <td><a href="">Edit</a> | <a href="" onclick="hapus()">Hapus</a></td>
-			</tr>
-		   </tbody>
+					<?php
+					include '../koneksi.php';
+					$sql = "SELECT * FROM tb_gear";
+					$result = mysqli_query($koneksi, $sql);
+					if (mysqli_num_rows($result) == 0) {
+						echo "
+			   <tr>
+				<td colspan='5' align='center'>
+                           Data Kosong
+                        </td>
+			   </tr>
+				";
+					}
+					while ($data = mysqli_fetch_assoc($result)) {
+						echo "
+                    <tr>
+                      <td>$data[jenis]</td>
+					  <td>$data[tipe]</td>
+                      <td>$data[merk]</td>
+					  <td>$data[harga]</td>
+                      <td >
+                        <a class='btn-edit'
+						style='background-color: #0c58ca;
+						color: white;
+						padding: 5px 16px;
+						margin-right: 8px;
+						border: none;
+						border-radius: 4px;
+						cursor: pointer;
+						font-size: 14px;
+						transition: background-color 0.3s;
+						text-decoration: none;'
+						href=gear-edit.php?id_gear=$data[id_gear]>
+                               Edit
+                        </a> | 
+                        <a class='btn-hapus'
+						style='background-color: #f44336;
+						color: white;
+						padding: 5px 16px;
+						margin-right: 8px;
+						border: none;
+						border-radius: 4px;
+						cursor: pointer;
+						font-size: 14px;
+						transition: background-color 0.3s;
+						text-decoration: none;'
+						href=gear-hapus.php?id_gear=$data[id_gear]>
+                            Hapus
+                        </a>
+                      </td>
+                    </tr>
+                  ";
+					}
+					?>
+				</tbody>
 		</table>
 	   </div>
 	   <script>

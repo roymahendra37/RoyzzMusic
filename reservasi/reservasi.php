@@ -19,6 +19,7 @@
                     <li><a href="../admin.php">Dashboard</a></li>
                     <li><a href="../gear/gear.php">Gear</a></li>
                     <li><a href="../reservasi/reservasi.php">Reservasi</a></li>
+                    <li><a href="logout.php">Logout</a></li>
                 </ul>
             </nav>
         </div>

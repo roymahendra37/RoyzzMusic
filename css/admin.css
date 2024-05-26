@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 .navcontainer {
@@ -95,6 +95,32 @@ th, td {
 	border: 1px solid black;
 	padding: 5px 20px;
 }
+
+/* .btn-edit,
+.btn-delete {
+   padding: 8px 16px;
+   margin-right: 8px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 14px;
+   transition: background-color 0.3s;
+}
+
+.btn-edit {
+   background-color: #0c58ca;
+   color: white;
+}
+
+.btn-delete {
+   background-color: #f44336;
+   color: white;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+   background-color: #4ca045;
+} */
 
 .btn {
 	background-color: #0069e1;

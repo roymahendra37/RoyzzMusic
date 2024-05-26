@@ -1,10 +1,24 @@
-<?php 
+<?php
+  include '../koneksi.php';
+  $id = $_GET['id_gear'];
+  if(!isset($_GET['id_gear'])) {
+    echo "
+      <script>
+        alert('Tidak ada ID yang Terdeteksi');
+        window.location = 'gear.php';
+      </script>
+    ";
+  }
+
+  $sql = "SELECT * FROM tb_gear WHERE id_gear = '$id'";
+  $result = mysqli_query($koneksi, $sql);
+  $data = mysqli_fetch_assoc($result);
+
 	session_start();
 	if($_SESSION['username'] == null) {
 		header('location:../login.php');
 	}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,23 +40,22 @@
                     <li><a href="../admin.php">Dashboard</a></li>
                     <li><a href="../gear/gear.php">Gear</a></li>
                     <li><a href="../reservasi/reservasi.php">Reservasi</a></li>
-                    <li><a href="logout.php">Logout</a></li>
+                    <li><a href="../logout.php">Logout</a></li>
                 </ul>
             </nav>
         </div>
     </div>
     <form class="halreservasi-entry" action="gear-proses.php" method="post" enctype="multipart/form-data">
         <div class="hreservasi-entry">
-            <p>Tambah Data</p>
-            <label>Jenis Gear</label>
-            <input class="input" type="text" name="jenis"/>
-            <label>Tipe</label>
-            <input class="input" type="text" name="tipe"/>
-            <label>Merk</label>
-            <input class="input" type="text" name="merk"/>
-            <label>Harga</label>
-            <input class="input" type="text" name="harga"/>
-            <button class="btn-simpan" name="simpan">Simpan</button>
+        <h2 style="margin-bottom: -100px;">Ingin Menghapus Data ?</h2>
+            <input type="hidden" name="id_gear" value="<?= $data['id_gear'] ?>">
+                <button type="submit" class="btn" name="hapus" style="margin-top: -200px;">
+			        Yes
+		        </button>
+		        <button type="submit" class="btn" name="tidak" style="margin-top: -300px;">
+			        No
+		        </button>
+            </form>
         </div> 
     </form>
 </body>
