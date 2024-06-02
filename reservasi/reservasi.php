@@ -26,37 +26,50 @@
     </div>
     <div class="gear-content">
 		<h3>Reservasi</h3>
-		<button type="button" class="btn btn-tambah">
-		   <a href="../reservasi/reservasi-entry.php">Tambah Data</a>
-		</button>
+        <form action="reservasi-cetak.php">
+		 <input class="btn" type="submit" value="Cetak" style="margin: 10px; margin-left: 0px;">
+		 </form>  
 		<table class="table-data">
 		   <thead>
 			<tr>
-			  <th>Nama</th>
-			  <th>Jenis Paket</th>
 			  <th>Tanggal</th>
 			  <th>Jam</th>
+			  <th>Nama</th>
+			  <th>Jenis Paket</th>
               <th>Durasi</th>
-			  <th>Bukti Pembayaran</th>
-              <th>Pilih</th>
+              <th>Total Harga</th>
 			</tr>
 		   </thead>
 		   <tbody>
-			<tr>
-			   <td>Roy Mahendra</td>
-			   <td>Paket 2</td>
-               <td>12-04-2024</td>
-			   <td>18.00 WIB</td>
-               <td>2 Jam</td>
-               <td><img src="bukti.jpg"/></td>
-			   <td><a href="">Edit</a> | <a href="" onclick="hapus()">Hapus</a></td>
-			</tr>
+           <?php
+               include '../koneksi.php';
+               $sql = "SELECT * FROM tb_reservasi";
+               $result = mysqli_query($koneksi, $sql);
+               if (mysqli_num_rows($result) == 0) {
+                  echo "
+                  <h3 style='text-align: center; color: red;'>Data Kosong</h3>
+               ";
+               } else {
+                  while ($data = mysqli_fetch_assoc($result)) {
+                     echo "
+                     <tr>
+                         <td>$data[tanggal]</td>
+                         <td>$data[jam]</td>
+                         <td>$data[nama]</td>
+                         <td>$data[paket]</td>
+                         <td>$data[durasi] Jam</td>
+                         <td>Rp. $data[total]</td>
+                     </tr>
+                     ";
+                  }
+               }
+               ?>
 		   </tbody>
 		</table>
 	   </div>
        <script>
             function hapus(){
-                confirm('Apakah Anda Ingin Menghapus?');
+                confirm('Apakah Ingin Menghapus Data?');
             };
        </script>
 </body>
